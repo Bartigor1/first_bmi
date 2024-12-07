@@ -1,32 +1,51 @@
-import { View, StyleSheet, Text } from 'react-native';
+import { View, StyleSheet, Text, Button, TouchableOpacity } from 'react-native';
 
 export default function HomeScreen() {
+
+  const handlePressButton = () => {
+    console.log('Hello!');
+  };
+
   return (
-  <View style={{ flex: 1, backgroundColor: '#6C63FF' }}>
-    <Text style={{ 
-      // fontStyle: 'normal', 
-      fontWeight: '700', 
-      // fontSize: 25,
-      }}>
-      Get Started with
-    Tracking Your Health!</Text>
+  <View style={styles.container}>
+    <Text style={styles.getStartedText}>
+      Get Started with Tracking Your Health!
+    </Text>
+    <Text style={styles.noteText}>
+    Calculate your BMI and stay on top of your wellness journey, effortlessly.
+    </Text>
+    {/* <TouchableOpacity
+      onPress={handlePressButton}
+      style={{backgroundColor: '#ffffff'}}
+      >
 
-
-  </View>;
-  )
+      <text> Get Started </text>
+    </TouchableOpacity> */}
+  </View>
+  );
 }
-/* Get Started with Tracking Your Health! */
 
-// position: absolute;
-// width: 270px;
-// height: 65px;
-// left: 55px;
-// top: 517px;
-
-// font-weight: 700;
-// font-size: 25px;
-// line-height: 33px;
-// /* or 132% */
-
-// color: #FFFFFF;
+const styles = StyleSheet.create({
+container: {
+  flex: 1, 
+  backgroundColor: '#6C63FF',
+  justifyContent: 'center',
+  alignItems: 'center',
+},
+getStartedText: {
+  fontWeight: '700', 
+  fontSize: 25,
+  lineHeight: 33,
+  color: '#FFFFFF',
+  marginLeft: 55,
+  marginRight: 68,
+},
+noteText: {
+  fontSize: 15.33, 
+  lineHeight: 19,
+  color: '#C6C3F9',
+  marginHorizontal: 56,
+  marginTop: 21,
+}
+});
 
