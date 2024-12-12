@@ -1,18 +1,23 @@
-import { View, StyleSheet, Text, Button, TouchableOpacity } from 'react-native';
-
+import { View, StyleSheet, Text, Button, TouchableOpacity } from 'react-native'
+import { Image } from 'expo-image'
 export default function HomeScreen() {
-
   const handlePressButton = () => {
-    console.log('Нажатие кнопки Get Started');
-  };
+    console.log('Нажатие кнопки Get Started')
+  }
 
   return (
     <View style={styles.container}>
+      <Image
+        style={{ height: 251, width: 296 }}
+        source={require('./../ assets / images / start - page.png')}
+        contentFit="cover"
+      />
       <Text style={styles.getStartedText}>
         Get Started with Tracking Your Health!
       </Text>
       <Text style={styles.noteText}>
-        Calculate your BMI and stay on top of your wellness journey, effortlessly.
+        Calculate your BMI and stay on top of your wellness journey,
+        effortlessly.
       </Text>
       <View style={{ width: '100%' }}>
         <TouchableOpacity
@@ -22,7 +27,7 @@ export default function HomeScreen() {
         </TouchableOpacity>
       </View>
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
@@ -62,4 +67,4 @@ const styles = StyleSheet.create({
     lineHeight: 21,
     color: '#081854',
   }
-});
+})
