@@ -52,19 +52,4 @@ const styles = StyleSheet.create({
     marginHorizontal: 56,
     marginTop: 21,
   },
-  button: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: '#ffffff',
-    marginHorizontal: 30,
-    marginTop: 38,
-    paddingVertical: 27,
-    borderRadius: 63,
-  },
-  buttonText: {
-    fontSize: 17.6,
-    fontWeight: 500,
-    lineHeight: 21,
-    color: '#081854',
-  }
 })
