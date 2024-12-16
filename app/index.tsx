@@ -3,10 +3,12 @@ import { useRouter } from 'expo-router'
 import BaseButton from '@/components/BaseButton'
 import BaseImage from '@/components/BaseImage'
 import BaseText from '@/components/BaseText'
+import React from 'react'
 
 export default function HomeScreen() {
   const { replace } = useRouter()
   const handlePressButton = () => {
+
     replace('/main-screen')
     console.log('Нажатие кнопки Get Started')
   }
@@ -15,8 +17,8 @@ export default function HomeScreen() {
     <View style={styles.container}>
       <BaseImage type='text' />
       <BaseImage type='image' />
-      <BaseText type='title' style={undefined} />
-      <BaseText type='note' style={undefined} />
+      <BaseText type='title' />
+      <BaseText type='note' />
       <BaseButton
         style={{ marginTop: 38 }}
         onPress={handlePressButton}
@@ -34,4 +36,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+
 })

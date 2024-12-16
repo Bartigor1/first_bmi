@@ -1,5 +1,5 @@
-import { StyleSheet, StyleProp, ViewStyle } from 'react-native';
-import { Image } from 'expo-image'
+import { Image, StyleSheet, StyleProp, ViewStyle } from 'react-native';
+// import { Image } from 'expo-image'
 
 type BaseImageType = {
     type: 'text' | 'image',

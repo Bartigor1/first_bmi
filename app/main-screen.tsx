@@ -1,12 +1,14 @@
-import { View, StyleSheet, Text, TouchableOpacity } from 'react-native'
+import { Image, View, StyleSheet, Text, TouchableOpacity } from 'react-native'
 import { useRouter } from 'expo-router'
-import { Image } from 'expo-image'
 import BaseButton from '@/components/BaseButton'
+// import { Image } from 'expo-image'
 import { useState } from 'react'
+import React from 'react'
 
 export default function MainScreen() {
-    const { push } = useRouter()
 
+    const { push } = useRouter()
+    push('/main-screen')
     const [age, setAge] = useState(110)
     const [weight, setWeight] = useState(78)
     // let weight = 78
@@ -156,7 +158,7 @@ const styles = StyleSheet.create({
     },
     capsuleMinusButton: {
         backgroundColor: '#081854',
-        // opacity: isAgeLess16 ? 0.3 : 1,
+        opacity: isAgeLess16 ? 0.3 : 1,
         borderRadius: '100%',
         width: 34,
         aspectRatio: 1 / 1,
@@ -165,7 +167,7 @@ const styles = StyleSheet.create({
     },
     capsulePlusButton: {
         backgroundColor: '#081854',
-        // opacity: isAgeMore120 ? 0.3 : 1,
+        opacity: isAgeMore120 ? 0.3 : 1,
         borderRadius: '100%',
         width: 34,
         aspectRatio: 1 / 1,
